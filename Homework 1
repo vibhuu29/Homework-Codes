@@ -1,3 +1,4 @@
+	//Question1. Print the sum of square of N natural numbers
 #include <stdio.h>
 int main() {
 	int n;
@@ -10,3 +11,69 @@ int main() {
 	}
 	printf("The sum of square of first %d integers is: %d", n, sum);
 }
+
+
+	//Question2. Computing e^x series upto N terms.
+#include <stdio.h>
+int fact(int n) {                	// function to fid factorial of a number
+	int fact = 1;
+	for (int i = 1; i <= n; i++) {
+		fact = fact * i; 	//Multiply each number smaller than N and greater than 0
+	}
+	float fact_f = fact;
+	return fact_f;
+}
+int sqr(int num, int pow) {       	// function to raise a number num to power pow
+	int square = num;
+	for (int i = 1; i <= pow; i++) {
+		if (i == 1) {
+			square = num;
+		}
+		else {
+			square = square * num;
+		}
+	}
+	float sqr = square;
+	return sqr;
+}
+int main() {
+	int x, N;
+	printf("Enter the value of x: ");		//Input the value of x
+	scanf("%d", &x);
+	printf("Upto how many terms do you want to calculate the series: ");
+	scanf("%d", &N);
+	float series = 1;
+	for (int i = 1; i <= N - 1; i++) {		//Compute e^x in a loop for upto N terms
+		float fract = sqr(x, i) / fact(i);
+		printf("%f\n", fract);			//Print the indivisual terms
+		series = series + fract;
+	}
+	printf("\n");
+	printf("%f", series);				//print the sum of series
+}
+
+	//Question3. Test if a number is prime or not.
+#include <stdio.h>
+int main() {
+	int num, con;
+	scanf("%d", &num);
+	int num2 = num - 1;
+	for (int i = num - 1; i >= 2 && num2 > 1; i--) {
+		int div = num % num2;			//Find reminder by dividing N with every number smaller than it.
+		num2--;
+		if (div == 0) {				//Number is not prime if it is divisible by any number smaller than it
+			con = 0;
+			break;
+		}
+		else {					//Number is prime if it is not divisible by any number smaller than it
+			con = 1;
+		}
+	}
+	if (con == 0) {
+		printf("Not prime");
+	}
+	else if (con != 0) {
+		printf("prime");
+	}
+}
+
