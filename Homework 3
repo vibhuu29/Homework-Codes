@@ -1,4 +1,4 @@
-      //Question 1. Write a c program to add the square of two integer values
+		//Question 1. Write a c program to add the square of two integer values
 #include <stdio.h>
 int sqr2(int num1, int num2) {  //function to find square of two numbers
 	int square = (num1 * num1) + (num2 * num2);
@@ -12,3 +12,4 @@ int main() {
 	scanf("%d", &num2);
 	printf("Sum of square of two numbers is %d", sqr2(num1, num2));
 }
+		//Question2. 
