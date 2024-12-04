@@ -1,0 +1,13 @@
+    //Question1. Write a c program to add the square of two numners 
+int sqr2(int num1, int num2) {  //function to find square of two numbers
+	int square = (num1 * num1) + (num2 * num2);
+	return square;
+}
+int main() {
+	int num1, num2;
+	printf("enter first number: ");
+	scanf("%d", &num1);
+	printf("enter second number: ");
+	scanf("%d", &num2);
+	printf("Sum of square of two numbers is %d", sqr2(num1, num2));
+}
