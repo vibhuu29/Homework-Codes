@@ -1,0 +1,37 @@
+        //Question1. Convert the characters of a ctring to upper case
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char uppercase[100];
+    int i;
+    printf("Enter a string: ");         // Input the string
+    fgets(uppercase, sizeof(uppercase), stdin);                                    
+    for (i = 0; uppercase[i] != '\0'; i++)        // Convert each character to uppercase
+    {
+        uppercase[i] = toupper(uppercase[i]);
+    }
+    printf("Uppercase string: %s", uppercase);
+    return 0;
+}
+
+        //Question2. Convert the characters of a ctring to Lower case
+#include <stdio.h>
+#include <ctype.h>
+
+int main() 
+{
+    char lowercase[100];
+    int i;
+    printf("Enter a string: ");                 // Input the string
+    fgets(lowercase, sizeof(lowercase), stdin);                                    
+    for (i = 0; lowercase[i] != '\0'; i++)        // Convert each character to uppercase
+    {
+        lowercase[i] = tolower(lowercase[i]);
+    }
+    printf("lowercase string: %s", lowercase);
+    return 0;
+}
+
+        //Question2. Conect two strings to form one new string
+
