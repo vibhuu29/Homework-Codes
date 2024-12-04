@@ -1,20 +1,19 @@
-      //Question1. Write a c program to check if a number is perfect or not
+            //Question1. Write a c program to check if a number is perfect or not            
 #include<stdio.h>
 
 int main (){
     int a , sum =0;
      
-     printf("Enter a number you want to check   : \n");
+     printf("Enter a number: \n");
      scanf("%d", &a);
 
      if(a <=0){
-        printf(" please enter  any positive number🙏🏻\n");
+        printf(" please enter positive number\n");
         return 1;
      }
      for (int i = 1; i<a ;i++){
         if(a%i == 0){
             sum +=i;
-
         }
      }
     if (sum == a ){
@@ -25,4 +24,28 @@ int main (){
 
     }
 return 0;
+}
+
+            //Question2. Write a c program to convert decimal number to binary number
+#include <stdio.h>
+void decimaltobinary( int n){
+    int binary[50];
+    int i = 0;
+     while( n>0){
+        binary[i] = n %2 ;
+        n = n/2;
+        i++;
+     }
+     printf("In binaryy : ");
+     for (int a = i-1 ; i>=0 ;i--){
+        printf("%d\n",binary[i]);
+     }
+}
+int main ()
+{
+    int a ;
+    printf("Enter the decimal value to check : ");
+    scanf("%d",&a);
+    decimaltobinary(a);
+    return 0;
 }
