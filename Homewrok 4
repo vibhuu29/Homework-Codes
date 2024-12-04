@@ -1,4 +1,4 @@
-    //Question1. Write a c program to add the square of two numners 
+		//Question1. Write a c program to add the square of two numners 
 int sqr2(int num1, int num2) {  //function to find square of two numbers
 	int square = (num1 * num1) + (num2 * num2);
 	return square;
@@ -10,4 +10,52 @@ int main() {
 	printf("enter second number: ");
 	scanf("%d", &num2);
 	printf("Sum of square of two numbers is %d", sqr2(num1, num2));
+}
+
+		//Question2. Write a c program to find the average of two nubers using the avg function.
+#include <stdio.h>
+float avg(float num1, float num2) {  //function to find square of two numbers
+	float average = (num1 + num2) / 2;
+	return average;
+}
+int main() {
+	float n1, n2;
+	printf("enter first number: ");
+	scanf("%f", &n1);
+	printf("enter second number: ");
+	scanf("%f", &n2);
+	float cat = avg(n1, n2);
+	printf("average %f", cat);
+}
+
+		//Question3. Write a c program to convert lower case character to upper case character using functions
+#include <stdio.h>
+#include <ctype.h>
+char upp(char c) {      //function to capitalise letter
+	return toupper(c);
+}
+int main() {
+	char car;
+	printf("Enter a character: ");
+	scanf("%c", &car);
+	char car_up = upp(car);
+	printf("Capitalised letter is: %c ", car_up);
+}
+
+		//Question4. Write a c program to find the factorial of a number using functions
+#include <stdio.h>
+int fact(int n) {                	// function to fid factorial of a number
+	int fact = 1;
+	for (int i = 1; i <= n; i++) {
+		fact = fact * i; 	//Multiply each number smaller than N and greater than 0
+	}
+	float fact_f = fact;
+	return fact_f;
+}
+int main() {
+	int num;
+	printf("Enter the number you want to find factorial of: ");
+	scanf("%d", &num);
+	int cat = fact(num);
+	printf("factorial of the given number is: %d", cat);
 }
