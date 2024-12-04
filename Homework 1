@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+	int n;
+	int sum = 0;
+	printf("Enter a number: ");
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		int square = i * i;
+		sum = sum + square;
+	}
+	printf("The sum of square of first %d integers is: %d", n, sum);
+}
