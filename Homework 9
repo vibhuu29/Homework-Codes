@@ -1,0 +1,68 @@
+        Q//Questio1. Print hellow world using pointers.
+#include<stdio.h>
+int main()
+{
+    char *ptr ="Hello world";
+    printf("%s",ptr);
+}
+
+        //Question2. Add two numbers using pointers
+#include<stdio.h>
+int main()
+{
+    int a,b ,sum;
+    printf("Enter the  first number   :");
+    scanf("%d",&a);
+    printf("Enter the  second number   :");
+    scanf("%d",&b);
+    sum = a + b ;
+
+    int *p= &a ;
+    int *q =&b ;
+    int *r =&sum ;
+    printf("%d is the first number entered\n",*p);
+
+    printf("%d is the second number entered \n",*q);
+
+    printf("%d is the sum of the %d and %d\n",*r,*p,*q);
+}
+
+        //Question 3. Find average of two numbers using pointers
+#include <stdio.h>
+int main()
+{
+    int a,b,avg;
+    printf("Enter the  first number   :");
+    scanf("%d",&a);
+    printf("Enter the  second number   :");
+    scanf("%d",&b);
+    avg = (a + b)/2 ;
+  
+    int *p= &a ;
+    int *q =&b ;
+    int *r =&avg ;
+    printf("%d is the first number entered\n",*p);
+
+    printf("%d is the second number entered \n",*q);
+
+     printf("%d is the avg of the %d and %d\n",*r,*p,*q);
+}
+
+          //Question 4. Find the area of circle using pointers
+#include <stdio.h>
+int main()
+{
+    float r,area;
+    printf("Enter the radius   :");
+    scanf("%f",&r);
+
+    area = 3.14 * r*r ;
+  
+
+    float *p= &r ;
+    float *q =&area ;
+  
+    printf("%f is the radius entered\n",*p);
+
+     printf("%0.2f is the area of the circle having radius   %f \n",*q,*p);
+}
